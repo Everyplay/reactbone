@@ -1,3 +1,7 @@
+init:
+	npm install .
+	bower install .
+
 testunit:
 	./node_modules/.bin/jsxhint test/
 	./node_modules/.bin/baker build --target test_build/ --input . --index index.html --minify false --name tests --includes mocha,bower_components/chai/chai,baker-require
@@ -14,3 +18,5 @@ build: testall
 
 clean:
 	rm -rf dist/
+	rm -rf bower_components/
+	rm -rf node_modules/

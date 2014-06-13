@@ -1,0 +1,42 @@
+{
+  "name": "reactbone",
+  "version": "0.0.1",
+  "description": "React+Backbone = Awesomeness",
+  "main": "reactbone.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "envify": "~1.2.1",
+    "jsxcs": "~0.0.2",
+    "jsxhint": "~0.4.10",
+    "phantomjs": "~1.9.7-8",
+    "react": "~0.10.0",
+    "underscore": "~1.6.0",
+    "when": "~3.2.3",
+    "baker": "~0.0.1",
+    "baker-require": "~0.0.1",
+    "mocha-phantomjs": "~3.4.1"
+  },
+  "devDependencies": {
+    "mocha-phantomjs": "~3.4.1"
+  },
+  "scripts": {
+    "test": "make testall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Everyplay/reactbone.git"
+  },
+  "keywords": [
+    "react",
+    "backbone"
+  ],
+  "author": "Jaakko Lukkari <jaakko@applifier.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Everyplay/reactbone/issues"
+  },
+  "homepage": "https://github.com/Everyplay/reactbone"
+}
