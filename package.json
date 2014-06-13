@@ -18,7 +18,8 @@
     "mocha-phantomjs": "~3.4.1"
   },
   "devDependencies": {
-    "mocha-phantomjs": "~3.4.1"
+    "mocha-phantomjs": "~3.4.1",
+    "function-bind": "~0.1.0"
   },
   "scripts": {
     "test": "make testall"
