@@ -1,6 +1,6 @@
 init:
-	npm install .
-	bower install .
+	npm install
+	bower install
 
 testunit:
 	./node_modules/.bin/jsxhint test/
