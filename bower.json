@@ -1,0 +1,34 @@
+{
+  "name": "reactbone",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Everyplay/reactbone",
+  "authors": [
+    "Jaakko Lukkari <jaakko@applifier.com>"
+  ],
+  "description": "React+Backbone = Awesomeness",
+  "main": "dist/reactbone.js",
+  "keywords": [
+    "react",
+    "backbone",
+    "binding"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "underscore": "~1.6.0",
+    "when": "~3.2.3",
+    "react": "~0.10.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "chai": "~1.9.1",
+    "jquery": "~2.1.1"
+  }
+}
