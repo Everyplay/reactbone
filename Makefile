@@ -4,7 +4,7 @@ init:
 
 testunit:
 	./node_modules/.bin/jsxhint test/
-	./node_modules/.bin/baker build --target test_build/ --input . --index index.html --minify false --name tests --includes mocha,bower_components/chai/chai,baker-require
+	./node_modules/.bin/baker build --target test_build/ --input . --index index.html --minify false --name tests --includes es5-shim,mocha,bower_components/chai/chai,baker-require
 	./node_modules/.bin/mocha-phantomjs test_build/index.html
 
 teststyling:
