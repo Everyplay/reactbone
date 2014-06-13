@@ -15,8 +15,6 @@
     "react": "~0.10.0",
     "underscore": "~1.6.0",
     "when": "~3.2.3",
-    "baker": "~0.0.1",
-    "baker-require": "~0.0.1",
     "mocha-phantomjs": "~3.4.1"
   },
   "devDependencies": {
