@@ -14,14 +14,12 @@
     "phantomjs": "~1.9.7-8",
     "react": "~0.10.0",
     "underscore": "~1.6.0",
-    "when": "~3.2.3",
-    "mocha-phantomjs": "~3.4.1"
+    "when": "~3.2.3"
   },
   "devDependencies": {
     "function-bind": "~0.1.0",
-    "mocha-phantomjs": "~3.4.1",
-    "sear": "0.0.1",
-    "sear-require": "0.0.1"
+    "sear": "~0.0.2",
+    "sear-require": "~~0.0.1"
   },
   "scripts": {
     "test": "make testall"

@@ -4,8 +4,7 @@ init:
 
 testunit:
 	./node_modules/.bin/jsxhint test/
-	./node_modules/.bin/sear build --target test_build/ --input . --index index.html --minify false --name tests --includes mocha,bower_components/chai/chai,sear-require
-	./node_modules/.bin/mocha-phantomjs test_build/index.html
+	./node_modules/.bin/sear test test/
 
 teststyling:
 	./node_modules/.bin/jsxhint lib/
@@ -14,7 +13,7 @@ teststyling:
 testall: testunit teststyling
 
 build: testall
-	./node_modules/.bin/baker build --target dist/
+	./node_modules/.bin/sear build --name reactbone --minify true --target dist/ --includes sear-require
 
 clean:
 	rm -rf dist/
