@@ -4,6 +4,10 @@
 
 [React](http://facebook.github.io/react/) + [Backbone](http://backbonejs.org/) = Awesomeness
 
+### Comming soon
+- Documentation
+- Examples
+
 ### Testing
 
   ``` shell
