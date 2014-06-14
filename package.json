@@ -19,7 +19,7 @@
   "devDependencies": {
     "function-bind": "~0.1.0",
     "sear": "~0.0.2",
-    "sear-require": "~~0.0.1"
+    "sear-require": "~0.0.1"
   },
   "scripts": {
     "test": "make testall"
