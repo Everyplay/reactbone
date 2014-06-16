@@ -21,4 +21,4 @@ clean:
 	rm -rf node_modules/
 	
 coveralls:
-	./node_modules/.bin/sear test test/ --cov | COVERALLS_SERVICE_NAME="travis-ci" ./node_modules/coveralls/bin/coveralls.js
+	./node_modules/.bin/sear test test/ --cov -R node_modules/mocha-lcov-reporter/lib/lcov.js | COVERALLS_SERVICE_NAME="travis-ci" ./node_modules/coveralls/bin/coveralls.js
