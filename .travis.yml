@@ -6,3 +6,6 @@ install:
   - make init
 script:
   make testall
+after_success:
+  make coveralls
+
