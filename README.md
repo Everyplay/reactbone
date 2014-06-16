@@ -6,7 +6,7 @@
 
 [React](http://facebook.github.io/react/) + [Backbone](http://backbonejs.org/) = Awesomeness
 
-### Comming soon
+### Coming soon
 - Documentation
 - Examples
 
