@@ -17,6 +17,7 @@
     "when": "~3.2.3"
   },
   "devDependencies": {
+    "coveralls": "^2.10.0",
     "function-bind": "~0.1.0",
     "sear": "~0.0.2",
     "sear-require": "~0.0.1"
