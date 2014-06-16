@@ -8,10 +8,7 @@
   },
   "dependencies": {
     "backbone": "~1.1.2",
-    "envify": "~1.2.1",
-    "jsxcs": "~0.0.2",
-    "jsxhint": "~0.4.10",
-    "phantomjs": "~1.9.7-8",
+    "jquery": "^2.1.1",
     "react": "~0.10.0",
     "underscore": "~1.6.0",
     "when": "~3.2.3"
@@ -19,6 +16,8 @@
   "devDependencies": {
     "coveralls": "^2.10.0",
     "function-bind": "~0.1.0",
+    "jsxcs": "0.0.2",
+    "jsxhint": "^0.4.10",
     "sear": "~0.0.2",
     "sear-require": "~0.0.1"
   },
