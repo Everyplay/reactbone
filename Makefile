@@ -19,3 +19,6 @@ clean:
 	rm -rf dist/
 	rm -rf bower_components/
 	rm -rf node_modules/
+	
+coveralls:
+	./node_modules/.bin/sear test test/ --cov | COVERALLS_SERVICE_NAME="travis-ci" ./node_modules/coveralls/bin/coveralls.js
