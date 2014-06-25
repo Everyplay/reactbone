@@ -1,3 +1,5 @@
+/** @jsx React.DOM */
+
 "use strict";
 
 var should = chai.should();
@@ -58,9 +60,10 @@ describe('View tests', function () {
     });
 
     var view = HelloView({model: new NextModel({id: 2})});
-    view.componentWillMount();
-    view.render();
-    view.componentDidMount();
+    React.renderComponent(
+      view,
+      document.createElement('div')
+    );
   });
   it('view should require field from model when updated', function (next) {
     var NextModel = Model.extend({
@@ -85,18 +88,85 @@ describe('View tests', function () {
         console.log("Here");
       },
       render: function () {
-        return React.DOM.div(null, this.props.collection.each(function (item) {
-          return React.DOM.div(null, item.get('content'));
-        }));
+        return (
+          <div>
+           {this.props.collection.map(function (item) {
+             return item.get('content');
+           })}
+          </div>
+        );
       }
     });
 
     var collection = new Collection({}, {id: 1, content: 'content'});
-    var view = new View({collection: collection});
+    var view = new HelloCollectionView({collection: collection});
+    React.renderComponent(
+      view,
+      document.createElement('div')
+    );
+  });
+  it('should not fail when both component and its subviews are updated at the same time', function (done) {
+    var subReady = 0;
+    var mainReady = true;
 
-    view.componentWillMount();
-    view.render();
-    view.componentDidMount();
+    function doneIfReady(model, type) {
+      if (model.get('foo')) {
+        if (type === "sub") {
+          subReady++;
+        } else {
+          mainReady = true;
+        }
+      }
 
+      if (subReady === 2 && mainReady) {
+        done();
+      }
+    }
+
+    var SubView = View.extend({
+      componentDidUpdate: function() {
+        doneIfReady(this.props.model, "sub");
+      },
+      render: function() {
+        return (
+          <div>{this.props.model.get('foo')}</div>
+        );
+      }
+    });
+
+    var MainView = View.extend({
+      componentDidUpdate: function() {
+        doneIfReady(this.props.model, "main");
+      },
+      render: function () {
+        return (
+          <div>
+            <SubView model={this.props.model} />
+            {this.props.model.get('foo')}
+            <SubView model={this.props.model} />
+          </div>
+        );
+      }
+    });
+
+    var NextModel = Model.extend({
+      type: 'next',
+      isNew: function () {
+        return false;
+      },
+      requireFields: function () {
+        var self = this;
+        setTimeout(function () {
+          self.set('foo', true);
+        }, 100);
+      }
+    });
+
+    var view = MainView({model: new NextModel()});
+
+    React.renderComponent(
+      view,
+      document.createElement('div')
+    );
   });
 });
