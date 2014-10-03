@@ -13,7 +13,7 @@ teststyling:
 testall: testunit teststyling
 
 build: testall
-	./node_modules/.bin/sear build --name reactbone --minify true --target dist/ --includes sear-require
+	./node_modules/.bin/sear build --name reactbone --minify true --target dist/
 
 clean:
 	rm -rf dist/

@@ -1,6 +1,6 @@
 {
   "name": "reactbone",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React+Backbone = Awesomeness",
   "main": "reactbone.js",
   "directories": {
@@ -11,7 +11,8 @@
     "jquery": "^2.1.1",
     "react": "~0.11.0",
     "underscore": "~1.6.0",
-    "when": "~3.2.3"
+    "when": "~3.2.3",
+    "sear": "~0.0.22"
   },
   "devDependencies": {
     "coveralls": "^2.10.0",
